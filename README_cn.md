@@ -12,7 +12,7 @@
 1.下载最新的 [release](https://github.com/kafuuchino-desu/MCDaemon/releases)  
 2.解压之后在解压出的文件夹里面创建一个启动脚本： `start.sh`   
 3.在启动脚本里面输入你的服务端启动参数 (建议使用 `cd server && [服务端启动命令]`之后把服务端放在server文件夹内方便管理文件)  
-4.使用 `pip install -r requirments.txt`安装依赖  
+4.使用 `pip install -r requirements.txt`安装依赖  
 5.用 `python server.py` 启动服务端  
 
 ------
@@ -26,6 +26,10 @@
 ### onServerStartup() API
 
 在你的插件文件中定义一个onServerStartup(srever, info)函数(例如 `plugin.py`)  
+
+### onPlayerJoin() 和 onPlayerLeave() API
+
+在你的插件中定义一个onPlayerJoin(server, playername) 或者 onPlayerLeave(server, playername) 函数，playername变量是一个str，包含那个正在退出或加入服务器的玩家名
 
 ----------
 
